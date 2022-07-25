@@ -6,10 +6,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 
 public class QuartzInfusedGlass extends BaseElectrolysisBlock {
-    public QuartzInfusedGlass() {
-        super(BlockBehaviour.Properties.of(Material.GLASS)
-                .strength(4f, 4f)
-                .noOcclusion()
-                .sound(SoundType.GLASS));
+    public QuartzInfusedGlass(BlockBehaviour.Properties properties) {
+        super(properties);
     }
 }

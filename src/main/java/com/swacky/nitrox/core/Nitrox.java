@@ -43,6 +43,7 @@ public class Nitrox {
     public Nitrox()
     {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ModBlockEntities.BLOCK_ENTITIES.register(eventBus);
         ModEffects.EFFECTS.register(eventBus);
         ModBlocks.BLOCKS.register(eventBus);
         ModBlockItems.BLOCK_ITEMS.register(eventBus);
