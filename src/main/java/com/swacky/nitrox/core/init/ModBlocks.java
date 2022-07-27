@@ -27,8 +27,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> INFERNAL_FIRE = BLOCKS.register("infernal_fire",
             () -> new InfernalFire(BlockBehaviour.Properties.copy(Blocks.FIRE)));
     public static final RegistryObject<Block> QUARTZ_INFUSED_GLASS = BLOCKS.register("quartz_infused_glass",
-            () -> new QuartzInfusedGlass(BlockBehaviour.Properties.of(Material.GLASS).strength(4f, 4f).noOcclusion().sound(SoundType.GLASS)));
+            () -> new QuartzInfusedGlass(BlockBehaviour.Properties.of(Material.GLASS).strength(4f, 4f).noOcclusion().sound(SoundType.GLASS).isViewBlocking(Blocks::never)));
     public static final RegistryObject<Block> ELECTROLYTIC_CONTROLLER = BLOCKS.register("electrolytic_controller",
             () -> new ElectrolyticController(BlockBehaviour.Properties.of(Material.GLASS).strength(4f, 4f).noOcclusion().sound(SoundType.GLASS)));
-
 }

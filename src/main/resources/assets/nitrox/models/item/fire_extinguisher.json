@@ -3,7 +3,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "nitrox:items/fire_extinguisher",
-		"particle": "nitrox:items/modding/fire_extinguisher"
+		"particle": "nitrox:items/fire_extinguisher"
 	},
 	"elements": [
 		{

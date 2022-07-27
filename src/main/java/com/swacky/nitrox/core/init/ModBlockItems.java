@@ -17,4 +17,9 @@ public class ModBlockItems {
             () -> new BlockItemBase(ModBlocks.MAGNESIUM_OXIDE.get()));
     public static final RegistryObject<BlockItem> MAGNESIUM = BLOCK_ITEMS.register("magnesium",
             () -> new BlockItemBase(ModBlocks.MAGNESIUM.get()));
+    public static final RegistryObject<BlockItem> ELECTROLYTIC_CONTROLLER = BLOCK_ITEMS.register("electrolytic_controller",
+            () -> new BlockItemBase(ModBlocks.ELECTROLYTIC_CONTROLLER.get()));
+    public static final RegistryObject<BlockItem> QUARTZ_INFUSED_GLASS = BLOCK_ITEMS.register("quartz_infused_glass",
+            () -> new BlockItemBase(ModBlocks.QUARTZ_INFUSED_GLASS.get()));
+
 }

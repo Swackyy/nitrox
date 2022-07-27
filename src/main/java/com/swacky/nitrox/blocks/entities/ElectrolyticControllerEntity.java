@@ -1,12 +1,13 @@
 package com.swacky.nitrox.blocks.entities;
 
 import com.swacky.nitrox.core.init.ModBlockEntities;
+import com.swacky.nitrox.multiblock.MultiblockPattern;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 
 public class ElectrolyticControllerEntity extends BlockEntity implements BlockEntityTicker<ElectrolyticControllerEntity> {
     public ElectrolyticControllerEntity(BlockPos pos, BlockState state) {
@@ -14,7 +15,7 @@ public class ElectrolyticControllerEntity extends BlockEntity implements BlockEn
     }
 
     @Override
-    public void tick(Level level, BlockPos pos, BlockState state, ElectrolyticControllerEntity block) {
-
+    public void tick(@NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState state, @NotNull ElectrolyticControllerEntity block) {
+        System.out.println(MultiblockPattern.Electrolysis.wallsValid(pos, level));
     }
 }

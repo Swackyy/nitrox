@@ -8,6 +8,4 @@ public class BaseElectrolysisBlock extends Block {
     public BaseElectrolysisBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
-
-    public boolean baseElectrolysisBlock() { return true; }
 }
