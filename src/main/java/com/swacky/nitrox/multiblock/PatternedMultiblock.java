@@ -5,12 +5,12 @@ import com.swacky.nitrox.multiblock.electrolysis.BaseElectrolysisBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 
-public class MultiblockPattern {
+public class PatternedMultiblock {
     public static class Electrolysis {
         public static boolean wallsValid(BlockPos _pos, Level level) {
             pos = _pos;
             boolean output = firstWallsCheck(level) && secondWallsCheck(level) && thirdWallsCheck(level) && fourthWallsCheck(level) && level.getBlockState(pos).getBlock() instanceof ElectrolyticController;
-            System.out.println(firstWallsCheck(level) + "\n" + secondWallsCheck(level)+ "\n" + thirdWallsCheck(level)+ "\n" + fourthWallsCheck(level));
+            System.out.println(firstWallsCheck(level) + "1\n" + secondWallsCheck(level)+ "2\n" + thirdWallsCheck(level)+ "3\n" + fourthWallsCheck(level) + "4\n");
             return output;
         }
 

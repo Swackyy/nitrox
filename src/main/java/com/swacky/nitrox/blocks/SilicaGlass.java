@@ -11,8 +11,8 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-public class QuartzInfusedGlass extends BaseElectrolysisBlock {
-    public QuartzInfusedGlass(BlockBehaviour.Properties properties) {
+public class SilicaGlass extends BaseElectrolysisBlock {
+    public SilicaGlass(BlockBehaviour.Properties properties) {
         super(properties);
     }
     @Override

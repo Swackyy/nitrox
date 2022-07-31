@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "nitrox:blocks/quartz_infused_glass"
+    "all": "nitrox:blocks/silica_glass"
   }
 }

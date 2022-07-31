@@ -12,8 +12,4 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(modid = Nitrox.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
-    @SubscribeEvent
-    public static void setRenderLayer(FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.QUARTZ_INFUSED_GLASS.get(), RenderType.cutout());
-    }
 }

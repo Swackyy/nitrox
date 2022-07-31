@@ -1,6 +1,7 @@
 package com.swacky.nitrox.core;
 
 import com.mojang.logging.LogUtils;
+import com.swacky.nitrox.client.render.DiamondDrillHeadRenderer;
 import com.swacky.nitrox.core.init.*;
 import net.minecraft.client.Game;
 import net.minecraft.client.Minecraft;
@@ -12,6 +13,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.common.ForgeConfig;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -91,7 +94,12 @@ public class Nitrox {
     {
         @SubscribeEvent
         public static void setRenderLayer(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.QUARTZ_INFUSED_GLASS.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.SILICA_GLASS.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.OBSIDIAN_GLASS.get(), RenderType.translucent());
+        }
+        @SubscribeEvent
+        public static void renderBlockEntities(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.DIAMOND_DRILL_HEAD.get(), DiamondDrillHeadRenderer::new);
         }
 
         @SubscribeEvent
